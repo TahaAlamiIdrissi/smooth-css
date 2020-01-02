@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  width: 110%;
+  height: 6vh;
+  padding-top: 25px;
+}
+nav h3 {
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+nav li {
+  list-style: none;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  transition: 0.6s ease;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+section#home {
+  background: url(https://i.pinimg.com/originals/a4/35/0f/a4350f5ddea8626010c47734e09d44d1.jpg)
+    no-repeat center center/cover;
+}
+
+section#home h1 {
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  color: white;
+}
+section#home p {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  width: 85%;
+  font-size: 28px;
+  font-weight: 200;
+}
+nav a:hover {
+  background: white;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+section#explore {
+  background: url(https://siboneycubancuisine.com/image/27909-full_pure-black-wallpapers-top-free-pure-black-backgrounds.jpg)
+    no-repeat center center/cover;
+}
+
+section#explore h1 {
+  color: white;
+  /*background: red;*/
+  margin-bottom: 2%;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-top: 5%;
+  font-size: 3em;
+}
+
+section#explore p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  width: 50%;
+  margin-bottom: 2%;
+}
+
+.card-section {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.card {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 320px 50px 100px;
+  grid-template-areas: "image" "title" "desc";
+}
+
+.card-image-one {
+  grid-area: image;
+  background: url(https://noautorizado.com/wp-content/uploads/2017/05/muralla-china-0.jpg)
+    no-repeat center center/cover;
+    transition: ease 0.8s;
+}
+.card-image-one:hover {
+    transform: translateX(150%) scale(1.5);
+}
+.card-image-two:hover {
+    transform:  scale(1.5);
+}
+.card-image-three:hover {
+    transform: translateX(-150%) scale(1.5);
+}
+.card-image-two {
+  grid-area: image;
+  background: url(https://i0.wp.com/www.unsacsurledos.com/wp-content/uploads/2014/04/Machu_Picchu_Peru.jpg?fit=2560%2C1600&ssl=1)
+    no-repeat center center/cover;
+    transition: ease 0.8s;
+}
+.card-image-three {
+  grid-area: image;
+  background: url(https://wallup.net/wp-content/uploads/2016/01/109890-lake-748x468.jpg)
+    no-repeat center center/cover;
+    transition: ease 0.8s;
+}
+.card-title {
+  grid-area: title;
+  margin: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 19px;
+  color: white;
+}
+.card-desc {
+  grid-area: desc;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  top: 0;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    top: 100%;
+  }
+}
+.card-one {
+  animation: fadein 3s;
+}
+.card-two {
+  animation: fadein 4s;
+}
+.card-three {
+  animation: fadein 5s;
+}
+
+section#adventure {
+  background: url(https://images.wallpaperscraft.com/image/road_forest_night_140015_3840x2400.jpg)
+    no-repeat center center/cover;
+}
+
+section#adventure h3 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 4.5em;
+  text-transform: uppercase;
+}
+
+section#adventure p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  width: 70%;
+  font-size: 1.2em;
+}
+
+section#adventure button {
+  border: 0;
+  margin: 20px;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-size: 1em;
+  padding: 25px;
+  border-radius: 35px;
+  width: 15%;
+}
+
+section#contact {
+  background: url(https://papers.co/wallpaper/papers.co-mx27-street-lights-dark-night-car-city-36-3840x2400-4k-wallpaper.jpg)
+    no-repeat center center/cover;
+}
+
+section#contact h3 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 3em;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+section#contact p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 15px;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  height: 8vh;
+  width: 40%;
+  padding: 8px;
+}
+.input-form span {
+  width: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.input-form input {
+  padding: 8px;
+  border: 0;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  outline: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+button {
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  font-size: 1em;
+  border-radius: 35px;
+  width: 10%;
+  padding: 15px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.container-fadein {
+    animation: fadein 3s ;
+}
